@@ -1,8 +1,10 @@
 import classes from './index.module.css';
 
+import Jokers from './Jokers';
+
 const ScoreField = () => {
   return <div className={classes.ScoreField}>
-    ScoreField
+    <Jokers></Jokers>
   </div>
 }
 
