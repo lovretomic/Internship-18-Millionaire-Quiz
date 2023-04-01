@@ -6,7 +6,7 @@ const Steps = () => {
     {steps.map((step, i) => {
       return <div key={i} className={classes.step}>
         <div className={classes.stepNumber}>{i + 1}</div>
-        <div className={classes.stepValue}>{step}</div>
+        <div className={classes.stepValue}>${step}</div>
       </div>
     })}
   </div>

@@ -3,10 +3,11 @@
   flex-direction: column-reverse;
   justify-content: flex-end;
   box-sizing: border-box;
-  padding: 10px 20px;
 }
 
 .step {
+  box-sizing: border-box;
+  padding: 0 40px;
   display: grid;
   grid-template-columns: 50px 1fr;
   color: orange;
