@@ -1,6 +1,7 @@
 import classes from './App.module.css';
 import Header from './components/Header';
 import QuestionField from './components/QuestionField';
+import QuestionButtons from './components/QuestionButtons';
 import ScoreField from './components/ScoreField';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className={classes.content}>
       <div className={classes.contentLeft}>
         <QuestionField></QuestionField>
+        <QuestionButtons></QuestionButtons>
       </div>
       <div className={classes.contentRight}>
         <ScoreField></ScoreField>
