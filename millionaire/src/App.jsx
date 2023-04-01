@@ -1,4 +1,4 @@
-import classes from './index.module.css';
+import classes from './App.module.css';
 import Header from 'components/Header';
 import QuestionField from 'components/QuestionField';
 import QuestionButtons from 'components/QuestionButtons';
