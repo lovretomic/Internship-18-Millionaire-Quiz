@@ -1,5 +1,7 @@
+import classes from './index.module.css';
+
 const ScoreField = () => {
-  return <div>
+  return <div className={classes.ScoreField}>
     ScoreField
   </div>
 }

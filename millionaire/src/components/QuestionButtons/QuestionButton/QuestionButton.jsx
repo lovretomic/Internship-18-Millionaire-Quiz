@@ -1,7 +1,7 @@
 import classes from './index.module.css';
 
 const QuestionButton = () => {
-  return <div className={classes.QuestionButton}>OPTION</div>
+  return <button className={classes.QuestionButton}>OPTION</button>
 }
 
 export default QuestionButton;
