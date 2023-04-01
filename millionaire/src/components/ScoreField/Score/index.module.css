@@ -1,0 +1,16 @@
+.scoreTitle {
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  margin: 5px 0 3px 0;
+  font-size: 20px;
+}
+
+.scoreBar {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 7px 30px;
+  border-top: 3px solid rgb(9, 87, 255);
+  border-bottom: 3px solid rgb(9, 87, 255);
+  color: white;
+}

@@ -1,0 +1,30 @@
+.steps {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  color: orange;
+  font-weight: 900;
+}
+
+.step:nth-of-type(5n) {
+  color: white;
+}
+
+.step.active {
+  background-color: orange;
+}
+
+.step.active > .stepNumber {
+  color: white;
+}
+
+.step.active > .stepValue {
+  color: black;
+}
