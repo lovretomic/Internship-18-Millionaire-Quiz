@@ -98,5 +98,105 @@
       "Kuwait Investment Authority"
     ],
     "answer": "Norway Government Pension Fund Global"
+  },
+  {
+    "text": "What is the estimated net worth of the world's youngest self-made billionaire as of 2023?",
+    "options": [
+      "$1 billion",
+      "$2 billion",
+      "$3 billion",
+      "$4 billion"
+    ],
+    "answer": "$2 billion"
+  },
+  {
+    "text": "Which of these billionaires made their fortune in the fashion industry?",
+    "options": [
+      "Ralph Lauren",
+      "Giorgio Armani",
+      "Miuccia Prada",
+      "Karl Lagerfeld"
+    ],
+    "answer": "Miuccia Prada"
+  },
+  {
+    "text": "What is the name of the world's largest asset manager, with over $9 trillion in assets under management?",
+    "options": [
+      "BlackRock",
+      "Vanguard",
+      "State Street Global Advisors",
+      "Fidelity Investments"
+    ],
+    "answer": "BlackRock"
+  },
+  {
+    "text": "Which of these tech billionaires co-founded PayPal before becoming a venture capitalist?",
+    "options": [
+      "Peter Thiel",
+      "Marc Andreessen",
+      "Reid Hoffman",
+      "Elon Musk"
+    ],
+    "answer": "Peter Thiel"
+  },
+  {
+    "text": "What is the name of the world's largest real estate investment trust, with over $100 billion in assets?",
+    "options": [
+      "Prologis",
+      "Simon Property Group",
+      "Equinix",
+      "Crown Castle International"
+    ],
+    "answer": "Prologis"
+  },
+  {
+    "text": "Which of these billionaires is also a successful media mogul?",
+    "options": [
+      "Ted Turner",
+      "Oprah Winfrey",
+      "Michael Bloomberg",
+      "David Geffen"
+    ],
+    "answer": "Oprah Winfrey"
+  },
+  {
+    "text": "What is the estimated net worth of the world's richest athlete as of 2023?",
+    "options": [
+      "$1 billion",
+      "$2 billion",
+      "$3 billion",
+      "$4 billion"
+    ],
+    "answer": "$2 billion"
+  },
+  {
+    "text": "Which of these industries has produced the most female billionaires?",
+    "options": [
+      "Technology",
+      "Fashion",
+      "Real Estate",
+      "Entertainment"
+    ],
+    "answer": "Fashion"
+  },
+  {
+    "text": "What is the name of the world's largest private foundation, with over $50 billion in assets?",
+    "options": [
+      "Gates Foundation",
+      "Ford Foundation",
+      "Rockefeller Foundation",
+      "Bloomberg Philanthropies"
+    ],
+    "answer": "Gates Foundation"
+  },
+  {
+    "text": "Which of these billionaires is known for their investments in renewable energy?",
+    "options": [
+      "Michael Bloomberg",
+      "Bill Gates",
+      "Elon Musk",
+      "Warren Buffett"
+    ],
+    "answer": "Elon Musk"
   }
 ]
