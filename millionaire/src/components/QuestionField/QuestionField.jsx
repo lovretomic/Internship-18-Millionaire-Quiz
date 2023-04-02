@@ -30,7 +30,7 @@ const QuestionField = () => {
   return <div className={classes.QuestionField}>
     <button onClick={printStep}>Step?</button>
     <button onClick={() => increaseStep()}>Increase step!</button>
-    <p>{question.text}</p>
+    <p className={classes.QuestionFieldText}>{question.text}</p>
   </div>;
 };
 

@@ -1,5 +1,7 @@
 .QuestionButton {
   border: 1px solid white;
+  color: white;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
