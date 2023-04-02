@@ -24,19 +24,19 @@ const QuestionProvider = ({ children }) => {
   }
 
   useEffect(() =>{
-    console.log('useEffect');
+    if (unusedQuestions.length === 0) {
+      setQuestion({
+        text: "# No more questions #",
+        options: ["", "", "", ""],
+        answer: "*"
+      })
+      return;
+    }
     const randomNum = getRandomNumber(0, unusedQuestions.length);
     setQuestion(unusedQuestions[randomNum]);
-
-    console.log('first unused questions', unusedQuestions);
-
     const newUnusedQuestions = [...unusedQuestions];
-    console.log('new unused questions', newUnusedQuestions);
     newUnusedQuestions.splice(randomNum, 1);
-    console.log('new spliced unused questions', newUnusedQuestions);
     setUnusedQuestions(newUnusedQuestions);
-
-    console.log('second unused questions', unusedQuestions);
   }, [step]);
 
   return (
