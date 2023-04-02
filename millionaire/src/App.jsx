@@ -1,11 +1,15 @@
 import classes from './App.module.css';
+
+import StepProvider from 'providers/StepProvider';
+
 import Header from 'components/Header';
 import QuestionField from 'components/QuestionField';
 import QuestionButtons from 'components/QuestionButtons';
 import ScoreField from 'components/ScoreField';
 
 function App() {
-  return <div className={classes.App}>
+  return <StepProvider>
+  <div className={classes.App}>
     <Header></Header>
     <div className={classes.content}>
       <div className={classes.contentLeft}>
@@ -16,7 +20,8 @@ function App() {
         <ScoreField></ScoreField>
       </div>
     </div>
-  </div>;
+  </div>
+  </StepProvider>;
 }
 
 export default App;
