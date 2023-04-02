@@ -1,6 +1,6 @@
 [
   {
-    "question": "Which of these billionaires has donated the most money to charity?",
+    "text": "Which of these billionaires has donated the most money to charity?",
     "options": [
       "Bill Gates",
       "Warren Buffett",
@@ -10,7 +10,7 @@
     "answer": "Bill Gates"
   },
   {
-    "question": "What is the name of the world's largest hedge fund, with over $150 billion in assets under management?",
+    "text": "What is the name of the world's largest hedge fund, with over $150 billion in assets under management?",
     "options": [
       "Bridgewater Associates",
       "Renaissance Technologies",
@@ -20,7 +20,7 @@
     "answer": "Bridgewater Associates"
   },
   {
-    "question": "What is the estimated net worth of the world's richest person as of 2023?",
+    "text": "What is the estimated net worth of the world's richest person as of 2023?",
     "options": [
       "$150 billion",
       "$200 billion",
@@ -30,7 +30,7 @@
     "answer": "$300 billion"
   },
   {
-    "question": "Which of these industries has produced the most self-made billionaires?",
+    "text": "Which of these industries has produced the most self-made billionaires?",
     "options": [
       "Technology",
       "Real Estate",
@@ -40,7 +40,7 @@
     "answer": "Real Estate"
   },
   {
-    "question": "Who is the first self-made female billionaire?",
+    "text": "Who is the first self-made female billionaire?",
     "options": [
       "Oprah Winfrey",
       "Sara Blakely",
@@ -50,7 +50,7 @@
     "answer": "Diane Hendricks"
   },
   {
-    "question": "What is the name of the world's largest private equity firm, with over $300 billion in assets under management?",
+    "text": "What is the name of the world's largest private equity firm, with over $300 billion in assets under management?",
     "options": [
       "Blackstone Group",
       "Carlyle Group",
@@ -60,7 +60,7 @@
     "answer": "Blackstone Group"
   },
   {
-    "question": "What is the name of the world's largest investment bank, with over $2 trillion in assets?",
+    "text": "What is the name of the world's largest investment bank, with over $2 trillion in assets?",
     "options": [
       "Goldman Sachs",
       "JP Morgan Chase",
@@ -70,7 +70,7 @@
     "answer": "JP Morgan Chase"
   },
   {
-    "question": "What is the estimated net worth of the world's richest woman as of 2023?",
+    "text": "What is the estimated net worth of the world's richest woman as of 2023?",
     "options": [
       "$50 billion",
       "$100 billion",
@@ -80,7 +80,7 @@
     "answer": "$100 billion"
   },
   {
-    "question": "Which of these billionaires is also a successful space entrepreneur?",
+    "text": "Which of these billionaires is also a successful space entrepreneur?",
     "options": [
       "Elon Musk",
       "Larry Ellison",
@@ -90,7 +90,7 @@
     "answer": "Elon Musk"
   },
   {
-    "question": "What is the name of the world's largest sovereign wealth fund, with over $1 trillion in assets under management?",
+    "text": "What is the name of the world's largest sovereign wealth fund, with over $1 trillion in assets under management?",
     "options": [
       "Abu Dhabi Investment Authority",
       "Norway Government Pension Fund Global",
