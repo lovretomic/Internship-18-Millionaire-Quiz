@@ -13,9 +13,7 @@ const Jokers = () => {
   const [usedJokers, setUsedJokers] = useState(defaultJokers);
 
   const removeWrongAnswers = () => {
-    console.log(usedJokers);
     setUsedJokers({...usedJokers, fiftyFifty: true});
-    alert('hanged');
     const newOptions = [...question.options];
     const answerIndex = newOptions.indexOf(question.answer);
     const removedOptions = [];
