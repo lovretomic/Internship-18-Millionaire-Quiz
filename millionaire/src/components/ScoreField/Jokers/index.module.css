@@ -19,7 +19,13 @@
   color: white;
 }
 
-.jokerButton:hover {
+.jokerButton:disabled {
+  background: #ccc;
+  color: #000;
+  cursor: default;
+}
+
+.jokerButton:not(:disabled):hover {
   background: yellow;
   color: black;
 }
