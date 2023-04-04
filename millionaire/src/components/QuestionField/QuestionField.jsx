@@ -3,10 +3,7 @@ import classes from "./index.module.css";
 import { useQuestionStatus } from "providers/QuestionProvider";
 import { useStepStatus } from "providers/StepProvider";
 
-/*
-import questions from "data/questions.json";
-import { useEffect } from "react";
-*/
+import DialogSwitch from "components/Dialogs/DialogSwitch";
 
 const getRandomNumber = (min, max) => {
   return Math.floor(Math.random() * (max - min) + min);
@@ -15,14 +12,6 @@ const getRandomNumber = (min, max) => {
 const QuestionField = () => {
   const {question} = useQuestionStatus();
   const {step, increaseStep} = useStepStatus();
-
-  /*
-  useEffect(() => {
-    console.log('useEffect');
-    const randomNum = getRandomNumber(0, questions.length);
-    setQuestion(questions[randomNum]);
-  }, [step]);
-  */
   
   const printStep = () => {
     console.log(step);
@@ -32,6 +21,7 @@ const QuestionField = () => {
     <button onClick={printStep}>Step?</button>
     <button onClick={() => increaseStep()}>Increase step!</button>
     <p className={classes.QuestionFieldText}>{question.text}</p>
+    <DialogSwitch />
   </div>;
 };
 

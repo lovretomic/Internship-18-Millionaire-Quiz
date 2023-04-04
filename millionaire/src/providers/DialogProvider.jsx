@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react"
+import { useState, createContext, useContext } from "react"
 
 export const DIALOG_TYPE = {
   CONFIRM_ANSWER_DIALOG: 'CONFIRM_ANSWER_DIALOG',
@@ -16,6 +16,7 @@ const defaultContext = {
 export const DialogContext = createContext(defaultContext);
 
 const DialogProvider = ({ children }) => {
+  console.log('children', children);
   const [activeDialog, setActiveDialog] = useState(null);
   const [additionalProps, setAdditionalProps] = useState({});
 
@@ -27,10 +28,10 @@ const DialogProvider = ({ children }) => {
   const close = () => {
     setActiveDialog(null);
     setAdditionalProps({});
-  }
+  }  
 
   return (
-  <DialogProvider.Provider value={{activeDialog, additionalProps}}>
+  <DialogProvider.Provider value={{activeDialog, additionalProps }}>
     {children}
   </DialogProvider.Provider>
   )
