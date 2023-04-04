@@ -42,10 +42,15 @@ const Jokers = () => {
     open(DIALOG.PHONE_DIALOG);
   }
 
+  const handlePublicJoker = () => {
+    setUsedJokers({...usedJokers, public: true});
+    open(DIALOG.PUBLIC_DIALOG);
+  }
+
   return <div className={classes.jokers}>
     <button className={classes.jokerButton} onClick={removeWrongAnswers} disabled={usedJokers.fiftyFifty}>50:50</button>
-    <button className={classes.jokerButton} onClick={handlePhoneJoker}>Phone</button>
-    <button className={classes.jokerButton}>Public</button>
+    <button className={classes.jokerButton} onClick={handlePhoneJoker} disabled={usedJokers.phone}>Phone</button>
+    <button className={classes.jokerButton} onClick={handlePublicJoker} disabled={usedJokers.public}>Public</button>
   </div>;
 }
 
