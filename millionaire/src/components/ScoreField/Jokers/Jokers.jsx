@@ -1,9 +1,11 @@
 import classes from './index.module.css';
 import { useQuestionStatus } from 'providers/QuestionProvider';
 import { useState } from 'react';
+import { DIALOG, useDialog } from 'providers/DialogProvider';
 
 const Jokers = () => {
   const {question, setQuestion} = useQuestionStatus();
+  const {open} = useDialog();
 
   const defaultJokers = {
     fiftyFifty: false,
@@ -35,9 +37,14 @@ const Jokers = () => {
     });
   }
 
+  const handlePhoneJoker = () => {
+    setUsedJokers({...usedJokers, phone: true});
+    open(DIALOG.PHONE_DIALOG);
+  }
+
   return <div className={classes.jokers}>
     <button className={classes.jokerButton} onClick={removeWrongAnswers} disabled={usedJokers.fiftyFifty}>50:50</button>
-    <button className={classes.jokerButton}>Phone</button>
+    <button className={classes.jokerButton} onClick={handlePhoneJoker}>Phone</button>
     <button className={classes.jokerButton}>Public</button>
   </div>;
 }
