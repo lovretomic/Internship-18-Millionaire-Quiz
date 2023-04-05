@@ -3,6 +3,9 @@ import { useQuestionStatus } from 'providers/QuestionProvider';
 import { useState } from 'react';
 import { DIALOG, useDialog } from 'providers/DialogProvider';
 
+import phoneIcon from '../../../assets/phone.png';
+import publicIcon from '../../../assets/public.png';
+
 const Jokers = () => {
   const {question, setQuestion} = useQuestionStatus();
   const {open} = useDialog();
@@ -49,8 +52,8 @@ const Jokers = () => {
 
   return <div className={classes.jokers}>
     <button className={classes.jokerButton} onClick={removeWrongAnswers} disabled={usedJokers.fiftyFifty}>50:50</button>
-    <button className={classes.jokerButton} onClick={handlePhoneJoker} disabled={usedJokers.phone}>Phone</button>
-    <button className={classes.jokerButton} onClick={handlePublicJoker} disabled={usedJokers.public}>Public</button>
+    <button className={classes.jokerButton} onClick={handlePhoneJoker} disabled={usedJokers.phone}><img src={phoneIcon} /></button>
+    <button className={classes.jokerButton} onClick={handlePublicJoker} disabled={usedJokers.public}><img src={publicIcon} /></button>
   </div>;
 }
 

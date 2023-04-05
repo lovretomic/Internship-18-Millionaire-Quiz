@@ -17,6 +17,15 @@
   border: 4px solid rgb(9, 87, 255);
   background: black;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jokerButton > img {
+  height: 30px;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .jokerButton:disabled {
