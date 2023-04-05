@@ -1,23 +1,17 @@
 import { Dialog, DialogActions, DialogTitle, Button } from "@mui/material";
 import { useStepStatus } from "providers/StepProvider";
 
-const FinishDialog = ({ isOpen, onClose }) => {
+const FinishDialog = ({ isOpen }) => {
   const { step } = useStepStatus();
 
-  const handleClick = () => {
+  const handleReload = () => {
     window.location.reload();
   }
 
-  const handleBackdropClick = (event) => {
-    event.stopPropagation();
-    return false;
-  };
-  
-
-  return <Dialog open={isOpen} handlebackdropclick={(e) => handleBackdropClick(e)}>
+  return <Dialog open={isOpen} onClose={handleReload}>
     <DialogTitle>{step === 15 ? "You won!" : "You lost!"}</DialogTitle>
     <DialogActions>
-      <Button onClick={handleClick}>Play Again</Button>
+      <Button onClick={handleReload}>Play Again</Button>
     </DialogActions>
   </Dialog>
 }

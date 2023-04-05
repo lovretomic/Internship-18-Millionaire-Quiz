@@ -6,7 +6,6 @@ import clsx from 'clsx';
 
 const Steps = () => {
   const { step } = useStepStatus();
-  console.log('currentStep', step);
   return <div className={classes.steps}>
     {steps.map((stepText, i) => {
       return <div key={i} className={clsx({

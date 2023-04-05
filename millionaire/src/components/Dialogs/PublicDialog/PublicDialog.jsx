@@ -62,14 +62,13 @@ const PublicDialog = ({ isOpen, onClose, question }) => {
     }
 
     let message = "";
-    console.log("answerPercentages:", answerPercentages);
+
     for (const [key, value] of Object.entries(answerPercentages)) {
-      console.log(`${key}: ${value}`);
       message += `${value}% of people answered ${key}.\n`;
     }
     return message;
   }
-  
+
   return <Dialog open={isOpen} onClose={onClose}>
     <DialogTitle className={classes.DialogTitle}><pre>{handleDialogText()}</pre></DialogTitle>
     <DialogActions>
