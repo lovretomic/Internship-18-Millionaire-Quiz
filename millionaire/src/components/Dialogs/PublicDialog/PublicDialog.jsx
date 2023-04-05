@@ -3,36 +3,66 @@ import classes from "./index.module.css";
 
 const PublicDialog = ({ isOpen, onClose, question }) => {
   const handleDialogText = () => {
-    const randomPercentage = Math.floor(Math.random() * 100) + 1;
+    const percentage = Math.floor(Math.random() * 100) + 1;
+    let correct = true;
+    if (percentage <= 20) correct = false;
 
-    const letters = ["A", "B", "C", "D"]
-    const correctAnswer = letters[question.options.indexOf(question.answer)];
+    let answerPercentages = {};
 
-    const remainingPercentage = () => {
-      return 100 - answerPercentages.A - answerPercentages.B - answerPercentages.C - answerPercentages.D;
-    }
+    if (correct) {
+      while (true) {
+        const parts = [];
+        let remaining = 100;
+        for (let i = 0; i < 3; i++) {
+          const part = Math.floor(Math.random() * remaining);
+          parts.push(part);
+          remaining -= part;
+        }
+        parts.push(remaining);
 
-    const answerPercentages = {
-      A: 0,
-      B: 0,
-      C: 0,
-      D: 0
-    }
+        const num1 = parts[0];
+        const num2 = parts[1];
+        const num3 = parts[2];
+        const num4 = parts[3];
+      
+        answerPercentages = {
+          [question.options[0]]: parts[0],
+          [question.options[1]]: parts[1],
+          [question.options[2]]: parts[2],
+          [question.options[3]]: parts[3],
+        }
 
-    if (randomPercentage <= 20) {
-      answerPercentages[correctAnswer] = 50 - (Math.floor(Math.random() * 50) + 1);
-    }
-    else {
-      answerPercentages[correctAnswer] = 50 + (Math.floor(Math.random() * 50) + 1);
-    }
+        if (Math.max(num1, num2, num3, num4) !== answerPercentages[question.answer]) break;
+      } 
+    } else {
+      while (true) {
+        const parts = [];
+        let remaining = 100;
+        for (let i = 0; i < 3; i++) {
+          const part = Math.floor(Math.random() * remaining);
+          parts.push(part);
+          remaining -= part;
+        }
+        parts.push(remaining);
 
-    for (const [key, value] of Object.entries(answerPercentages)) {
-      if (value === 0) {
-        answerPercentages[key] = remainingPercentage() - (Math.floor(Math.random() * remainingPercentage()) + 1);
-      }
+        const num1 = parts[0];
+        const num2 = parts[1];
+        const num3 = parts[2];
+        const num4 = parts[3];
+      
+        answerPercentages = {
+          [question.options[0]]: parts[0],
+          [question.options[1]]: parts[1],
+          [question.options[2]]: parts[2],
+          [question.options[3]]: parts[3],
+        }
+
+        if (Math.max(num1, num2, num3, num4) === answerPercentages[question.answer]) break;
+      } 
     }
 
     let message = "";
+    console.log("answerPercentages:", answerPercentages);
     for (const [key, value] of Object.entries(answerPercentages)) {
       console.log(`${key}: ${value}`);
       message += `${value}% of people answered ${key}.\n`;
