@@ -8,11 +8,11 @@
   border-radius: 10px;
   border: 5px solid rgb(9, 87, 255);
   background: none;
-  cursor: pointer;
 }
 
-.QuestionButton:hover {
+.QuestionButton:not(:disabled):hover {
   background: yellow;
+  cursor: pointer;
 }
 
 .QuestionButtonCircle {

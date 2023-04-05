@@ -17,7 +17,7 @@ const QuestionButton = ({ text, letter }) => {
     open(DIALOG.CONFIRM_ANSWER_DIALOG, {onSubmit: checkAnswer})
   }
 
-  return <button className={classes.QuestionButton} onClick={handleClick}>
+  return <button className={classes.QuestionButton} onClick={handleClick} disabled={text === ""}>
     <div className={classes.QuestionButtonCircle} />
     <p className={classes.QuestionButtonText}><span className={classes.QuestionButtonLetter}>{letter}: </span>{text}</p>
   </button>
