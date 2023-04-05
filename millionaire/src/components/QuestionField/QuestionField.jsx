@@ -8,14 +8,8 @@ import { useStepStatus } from "providers/StepProvider";
 const QuestionField = () => {
   const {question} = useQuestionStatus();
   const {step, increaseStep} = useStepStatus();
-  
-  const printStep = () => {
-    console.log(step);
-  }
 
   return <div className={classes.QuestionField}>
-    <button onClick={printStep}>Step?</button>
-    <button onClick={() => increaseStep()}>Increase step!</button>
     <p className={classes.QuestionFieldText}>{question.text}</p>
     <DialogSwitch />
   </div>;
