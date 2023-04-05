@@ -42,7 +42,7 @@ const PublicDialog = ({ isOpen, onClose, question }) => {
   return <Dialog open={isOpen} onClose={onClose}>
     <DialogTitle>{handleDialogText()}</DialogTitle>
     <DialogActions>
-      <Button onClick={onClose}>Hang up</Button>
+      <Button onClick={onClose}>OK</Button>
     </DialogActions>
   </Dialog>
 }
