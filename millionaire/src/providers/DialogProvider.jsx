@@ -23,9 +23,11 @@ const DialogProvider = ({ children }) => {
   const open = (dialog, additionalProps = {}) => {
     setActiveDialog(dialog);
     setAdditionalProps(additionalProps);
+    console.log('Opened dialog:', dialog);
   };
 
   const close = () => {
+    console.log('Closed dialog:', activeDialog);
     setActiveDialog(null);
     setAdditionalProps({});
   };

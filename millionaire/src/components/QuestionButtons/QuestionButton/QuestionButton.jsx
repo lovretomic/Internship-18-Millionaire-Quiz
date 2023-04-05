@@ -5,16 +5,21 @@ import { useStepStatus } from 'providers/StepProvider';
 import { DIALOG, useDialog } from 'providers/DialogProvider';
 
 const QuestionButton = ({ text, letter }) => {
-  const { open } = useDialog();
+  const { activeDialog, open } = useDialog();
   const {question, setQuestion} = useQuestionStatus();
   const {step, increaseStep} = useStepStatus();
   
   const checkAnswer = () => {
-    text === question.answer ? increaseStep() : alert('Wrong!');
+    if (text !== question.answer) {
+      setTimeout(() =>{
+        open(DIALOG.FINISH_DIALOG, {});
+      }, 100);
+    }
+    else increaseStep();
   }
 
-  const handleClick = () => {
-    open(DIALOG.CONFIRM_ANSWER_DIALOG, {onSubmit: checkAnswer})
+  const handleClick = (e) => {
+    open(DIALOG.CONFIRM_ANSWER_DIALOG, {onSubmit: checkAnswer});
   }
 
   return <button className={classes.QuestionButton} onClick={handleClick} disabled={text === ""}>
