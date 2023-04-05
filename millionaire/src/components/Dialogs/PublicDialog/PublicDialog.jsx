@@ -1,4 +1,5 @@
 import { Dialog, DialogActions, DialogTitle, Button } from "@mui/material";
+import classes from "./index.module.css";
 
 const PublicDialog = ({ isOpen, onClose, question }) => {
   const handleDialogText = () => {
@@ -40,7 +41,7 @@ const PublicDialog = ({ isOpen, onClose, question }) => {
   }
   
   return <Dialog open={isOpen} onClose={onClose}>
-    <DialogTitle>{handleDialogText()}</DialogTitle>
+    <DialogTitle className={classes.DialogTitle}><pre>{handleDialogText()}</pre></DialogTitle>
     <DialogActions>
       <Button onClick={onClose}>OK</Button>
     </DialogActions>
