@@ -5,8 +5,10 @@ const PhoneDialog = ({ isOpen, onClose, question }) => {
   const handleDialogText = () => {
     let message = "Friend: It might be ";
     const randomPercentage = Math.floor(Math.random() * 100) + 1
-    if (randomPercentage <= 10) 
-      message += "#random#.\n";
+    if (randomPercentage <= 10) {
+      const wrongAnswers = question.options.filter(option => option !== question.answer);
+      message += `${wrongAnswers[Math.floor(Math.random() * wrongAnswers.length)]}.\n`;
+    }
     else
       message += `${question.answer}.\n`;
     message += "You: How sure are you?\n";
